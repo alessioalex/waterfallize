@@ -9,7 +9,7 @@ Runs some functions in series, each passing their results to the next function. 
 # example
 
 ```js
-var waterfallize = require('../');
+var waterfallize = require('waterfallize');
 var next = waterfallize();
 
 next(function(callback) {
