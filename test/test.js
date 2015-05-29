@@ -1,7 +1,6 @@
 "use strict";
 
-// var test = require('tape');
-var test = require('tap').test;
+var test = require('tape');
 var waterfallize = require('../');
 
 test("functions should run in order", function(t) {
