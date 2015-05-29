@@ -1,0 +1,46 @@
+{
+  "name": "waterfallize",
+  "version": "1.0.0",
+  "description": "Control flow library, similar to `async.waterfall` but prettier and faster.",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "dependencies": {
+    "set-immediate-shim": "^1.0.1",
+    "sliced": "^0.0.5"
+  },
+  "devDependencies": {
+    "async": "^1.0.0",
+    "husky": "^0.8.1",
+    "istanbul": "^0.3.14",
+    "matcha": "^0.6.0",
+    "nyc": "^2.2.1",
+    "run-waterfall": "^1.1.1",
+    "tape": "^4.0.0"
+  },
+  "scripts": {
+    "test": "nyc tape test/test.js && nyc report --reporter=json",
+    "check-coverage": "istanbul check-coverage --statements 100 --functions 100 --branches 100 --lines 100",
+    "benchmark": "matcha benchmark/go.js",
+    "precommit": "npm test && npm run check-coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alessioalex/waterfallize.git"
+  },
+  "keywords": [
+    "async",
+    "waterfall",
+    "control",
+    "flow",
+    "control-flow",
+    "series"
+  ],
+  "author": "Alexandru Vladutu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alessioalex/waterfallize/issues"
+  },
+  "homepage": "https://github.com/alessioalex/waterfallize"
+}
