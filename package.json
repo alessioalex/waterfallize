@@ -12,9 +12,11 @@
   },
   "devDependencies": {
     "async": "^1.0.0",
+    "fastfall": "^1.2.3",
     "husky": "^0.8.1",
     "istanbul": "^0.3.14",
     "matcha": "^0.6.0",
+    "neo-async": "^1.2.1",
     "nyc": "^2.2.1",
     "run-waterfall": "^1.1.1",
     "tape": "^4.0.0"
