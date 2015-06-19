@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "async": "^1.0.0",
+    "eslint": "^0.23.0",
     "fastfall": "^1.2.3",
     "husky": "^0.8.1",
     "istanbul": "^0.3.14",
@@ -25,7 +26,8 @@
     "test": "nyc tape test/test.js && nyc report --reporter=json",
     "check-coverage": "istanbul check-coverage --statements 100 --functions 100 --branches 100 --lines 100",
     "benchmark": "matcha benchmark/go.js",
-    "precommit": "npm test && npm run check-coverage"
+    "lint": "eslint index.js test/test.js",
+    "precommit": "npm run lint && npm test && npm run check-coverage"
   },
   "repository": {
     "type": "git",

@@ -1,9 +1,10 @@
-"use strict";
+'use strict';
 
 var test = require('tape');
 var waterfallize = require('../');
 
-test("functions should run in order", function(t) {
+/*eslint-disable func-names*/
+test('functions should run in order', function(t) {
   var next = waterfallize();
   var order = [];
 
@@ -30,7 +31,7 @@ test("functions should run in order", function(t) {
   });
 });
 
-test("should handle passing an error to the cb", function(t) {
+test('should handle passing an error to the cb', function(t) {
   var next = waterfallize();
   var order = [];
   var fakeErr = new Error('stop');
@@ -58,14 +59,13 @@ test("should handle passing an error to the cb", function(t) {
   });
 });
 
-test("should throw an error for functions added async", function(t) {
+test('should throw an error for functions added async', function(t) {
   var next = waterfallize();
 
   setImmediate(function() {
     try {
       next(function() { });
-    }
-    catch(e) {
+    } catch(e) {
       t.ok(/tick/ig.test(e.message));
       t.end();
     }
