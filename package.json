@@ -1,6 +1,6 @@
 {
   "name": "waterfallize",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Control flow library, similar to `async.waterfall` but prettier and faster.",
   "main": "index.js",
   "directories": {
