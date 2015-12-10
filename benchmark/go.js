@@ -1,5 +1,6 @@
 "use strict";
 
+var cpus = require('os').cpus().length;
 var async = require('async');
 var neoAsync = require('neo-async');
 var waterfall = require('run-waterfall')
@@ -7,9 +8,9 @@ var fall = require('fastfall')();
 var waterfallize = require('../');
 
 suite('waterfall alternatives', function() {
-  // set('iterations', 100000);
-  // set('mintime', 2000);
-  // set('concurrency', 3);
+  set('iterations', 100000);
+  set('mintime', 2000);
+  set('concurrency', cpus);
 
   bench('neo-async.waterfall', function(done) {
     neoAsync.waterfall([
