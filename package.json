@@ -8,17 +8,17 @@
   },
   "dependencies": {
     "set-immediate-shim": "^1.0.1",
-    "sliced": "^0.0.5"
+    "sliced": "^1.0.1"
   },
   "devDependencies": {
     "alessioalex-standard": "^1.1.0",
     "async": "^1.0.0",
     "fastfall": "^1.2.3",
-    "husky": "^0.8.1",
-    "istanbul": "^0.3.14",
+    "husky": "^0.10.2",
+    "istanbul": "^0.4.1",
     "matcha": "^0.6.0",
     "neo-async": "^1.2.1",
-    "nyc": "^2.2.1",
+    "nyc": "^5.0.0",
     "run-waterfall": "^1.1.1",
     "tape": "^4.0.0"
   },
