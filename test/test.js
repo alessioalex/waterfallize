@@ -1,9 +1,9 @@
+/* eslint-disable no-console, func-names */
 'use strict';
 
 var test = require('tape');
 var waterfallize = require('../');
 
-/*eslint-disable func-names*/
 test('functions should run in order', function(t) {
   var next = waterfallize();
   var order = [];
@@ -65,7 +65,7 @@ test('should throw an error for functions added async', function(t) {
   setImmediate(function() {
     try {
       next(function() { });
-    } catch(e) {
+    } catch (e) {
       t.ok(/tick/ig.test(e.message));
       t.end();
     }
